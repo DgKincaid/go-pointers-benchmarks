@@ -1,3 +1,3 @@
 .PHONY: benchmark
 benchmark:
-	go test -bench . -benchmem
+	go test -gcflags "-m -m" -bench . -benchmem ./internal/...

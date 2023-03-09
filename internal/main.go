@@ -4,6 +4,10 @@ import "fmt"
 
 func main() {
 	fmt.Println("main")
+
+	order := NewOrderBuilderWithDefaults().order
+
+	ProcessOrder_Pointer(&order, 1)
 }
 
 func ProcessOrder_Copy(order Order, step int) Order {
